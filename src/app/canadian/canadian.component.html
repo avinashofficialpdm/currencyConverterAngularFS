@@ -1,0 +1,8 @@
+<form class="mt-4" [formGroup]="currencyForm" (ngSubmit)="convertCurrency()">
+    <input type="text" class="form-control w-50 ms-3 me-3 mt-3" formControlName="canadian"
+        placeholder="Canadian Dollar">
+    <span style="color: red;" class="ms-3 mb-2"
+        *ngIf="countOfCurrency && countOfCurrency.invalid && countOfCurrency.touched">Invalid input</span><br>
+    <button class="btn btn-danger m-2 ms-4" [disabled]="currencyForm.invalid">Convert</button>
+    <input type="text" class="form-control m-3 w-50" placeholder="INR" formControlName="inr">
+</form>
